@@ -62,7 +62,7 @@ h4{
     font-size: 15px;
     font-family:sans-serif;
     margin-left: 70px;
-    margin-top: 50px;
+    margin-top: 20px;
     font-weight: 500;
 }
 
@@ -72,7 +72,7 @@ h4{
     font-size: 15px;
     font-family:sans-serif;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     font-weight: 500;
 }
 
@@ -81,7 +81,7 @@ h4{
     font-size: 15px;
     font-family:sans-serif;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     font-weight: 500;  
 }
 
@@ -91,7 +91,7 @@ h4{
     font-size: 15px;
     font-style:italic;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     font-weight: 700; 
     color: rgb(223, 13, 128);
 }
@@ -100,7 +100,7 @@ h4{
     font-size: 15px;
     font-family:sans-serif;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     font-weight: 900;  
 } 
 
@@ -110,16 +110,18 @@ h4{
     font-size: 15px;
     font-style:italics;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     font-weight: 700;  
 }
 
-.strategy{
+.ref{
     font-weight: bold;
     color: rgb(226, 14, 43);
-    margin-top: 50px; 
+    margin-top: 20px; 
     font-size: 15px;
     font-style:italic;
+    margin-left: 70px;
+    
     
     
 }
@@ -149,6 +151,12 @@ h5{
     font-size: 20px;
     padding: 5px;
     text-align-last: center;
+}
+
+.copy{
+    color: rgb(226, 12, 12);
+    font-size: 15px;
+    margin-left: 10px;
 }
 
 .footer-icons{
