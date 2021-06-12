@@ -64,6 +64,7 @@ nav > ul > li > a {
 
 nav a:hover {
   background: white;
+  
 }
 /*section 3*/
 .div3 {
@@ -212,13 +213,18 @@ footer a{
   }
   nav > ul > li > a {
    
-    padding: 2em;
-    margin: 2em;
+    padding: 0em;
+    margin: 0em;
     color: white;
   
   }
+  .div2 {
+    
+  
+    padding: none;
+  }
   nav a:hover {
-    background: none;
+    background:blue;
   }
   
 }
