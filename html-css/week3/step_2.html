@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="step_2.css" />
+</head>
+
+<body>
+  <header>
+    <div>Logo</div>
+    <nav>Navigation</nav>
+  </header>
+  <main>
+
+    <section>
+      <h1>Sign up to yourcustomtailor.com</h1>
+      <h2>Step 2/4 - how can we reach you?</h2>
+      <div class="progress-bar-container">
+        <h3>Progress</h3>
+        <div class="progress-bar-orange">
+          <div class="progress-bar-black"></div>
+        </div>
+
+      </div>
+      <div>
+        <p>
+          We will probably need to stay in touch somehow.Let us know how we can reach you?
+        </p>
+      </div>
+
+
+
+    </section>
+    <form action="submission.html" method="GET">
+      <div class="contact">
+        <label>Email*</label>
+        <input type="email" id="mail" name="email" required />
+      </div>
+      <div>
+        <label for="phone">Phone*</label>
+        <input type="number" id="phone" name="phone" pattern="[0-9]{10}" required />
+      </div>
+      <div>
+
+        <label>Password*</label>
+        <input type="password" id="pw" name="pw" required />
+      </div>
+      <div>
+
+        <label for="re-pw">Reenter password*</label>
+        <input type="password" id="re-pw" name="re-pw" pattern="[0-9]{14,16}"
+          title="plese enter min 14 and max 16 digits" required />
+      </div>
+
+      </div>
+      <p>I want to sign up for the news letter</p>
+      <div class="check-box">
+        <div>
+          <label for="weekly">weekly news</label>
+          <input type="checkbox" id="weekly" name="weekly" value="" />
+        </div>
+        <div>
+          <label for="Monthly">Monthly news</label>
+          <input type="checkbox" id="Monthly" name="Monthly" value="" />
+        </div>
+        <div>
+          <label for="not-req">Don't send me news</label>
+          <input type="checkbox" id="not-req" name="not-req" value="" />
+
+        </div>
+      </div>
+
+      <button id="next-step"><a href="/step_3.html">Next step</a></button>
+    </form>
+
+  </main>
+</body>
+
+</html>

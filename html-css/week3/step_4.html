@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="step_4.css" />
+</head>
+
+<body>
+
+
+  <header>
+    <div>Logo</div>
+    <nav>Navigation</nav>
+  </header>
+  <main>
+
+    <section>
+      <h1>Sign up to yourcustomtailor.com</h1>
+      <h2>Step 4/4 - Payment</h2>
+      <div class="progress-bar-container">
+        <h3>Progress</h3>
+        <div class="progress-bar-orange">
+          <div class="progress-bar-black"></div>
+        </div>
+
+      </div>
+      <div>
+        <p>
+          Please fill in your data.
+        </p>
+      </div>
+    </section>
+    <form action="submission.html" method="GET">
+      <div class="card-name">
+        <div>
+          <label for="cname">Name on Card*</label>
+          <input type="text" id="cname" name="card name" required>
+        </div>
+        <div>
+          <label for="ccnum">Credit card number*</label>
+          <input type="number" id="ccnum" name="card number" class="form-input" min="100000" max="200000" title="enter 5 digits"required >
+        </div>
+      </div>
+      <div class="expiry-detail">
+        <div>
+          <label for="expmonth">Exp Month*</label>
+          <input type="text" id="expmonth" name="exp month" required>
+        </div>
+        <div>
+          <label for="expyear">Exp Year8</label>
+          <input type="number" id="expyear" name="exp year" required>
+        </div>
+      </div>
+      <div>
+        <label for="cvv">CVV*</label>
+        <input type="number" id="cvv" name="cvv" min="100" max="999" title="enter 3 digits" required>
+      </div>
+      <button type="submit">Finish</button>
+    </form>
+</body>
+
+</html>

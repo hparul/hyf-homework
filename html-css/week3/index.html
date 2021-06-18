@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>step 1a</title>
+    <link rel="stylesheet" type="text/css" href="step_1a.css" />
+  </head>
+
+  <body>
+    <!--header-->
+    <header>
+      <div>Logo</div>
+      <nav>Navigation</nav>
+    </header>
+    <!--main section-->
+    <main>
+      <section>
+        <h1>Sign up to yourcustomtailor.com</h1>
+        <p>
+          We cant wait to help you improve your life-style and gain the
+          attention from people around you!
+        </p>
+
+        <p>
+          Sign up below to save upto 70% on apparel,hand-bags and cosmetics.Our
+          agents are busy picking the best offers that match your preferences
+          and style.Every week we will send tou a hand-picked selection- we just
+          need to know a few details about you first...
+        </p>
+
+        <h2>Step 1/4 - tell us who you are?</h2>
+
+        <!--progress bar-->
+
+        <div class="progress-bar-container"></div>
+          <h3>Progress</h3>
+          
+          <div class="progress-bar-orange">
+            <div class="progress-bar-black"></div>
+          </div>
+        </div>
+          <p>
+            Nice to meet you.Lets spend a minute to get to know each
+            other?Please enter the following:
+          </p>
+        </div>
+      </section>
+<!--form starts here-->
+      <form action="submission.html" method="GET">
+        <!--code for name inputs-->
+        <div class="name">
+          <label for="fname">First name*</label>
+          <input type="text" id="fname" name="fname" required /><br />
+          <label for="lname">Last name*</label>
+          <input type="text" id="lname" name="lname" required />
+        </div>
+<!--code for country selection-->
+        <div class="country">
+          <label for="country">Country*</label>
+          <select id="country" name="country" required>
+            <option value="0">select your country</option>
+            <option value="Afghanistan">Afghanistan</option>
+
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">
+              Central African Republic
+            </option>
+            <option value="Chad">Chad</option>
+          </select>
+        </div>
+
+<!--code for address details-->
+
+        <div class="address">
+          <label>StreetAddress*</label>
+          <input type="text" name="address" required />
+          <label>Postcode*</label>
+          <input type="number" name="postcode" class="post-code"/>
+        </div>
+        <!--code for profile description-->
+
+        <div class="profile">
+          <label>Profile description</label>
+          
+          <textarea name="text-area" rows="10" cols="140" required> </textarea>
+
+
+          <p class="para-1">
+            Please provide a short<br> description of yourself to be<br> displaced on
+            our social<br> community pages.
+          </p>
+          </div>
+          <div>
+              <p class="para-2">
+                Use the same address for billing and shipping?Uncheck below to fill
+                out a separate shipping address.
+              </p>
+          </div>
+
+          <!--code for shipping checkbox-->
+
+          
+
+           <div class="check-box">
+             <label>Shipping</label>
+             
+              <input id="hide-form" type="checkbox" checked/>
+              <div class="box">
+                <!--code  for hiding form-->
+                <form>
+                <div class="name">
+                  <label for="fname">First name*</label>
+                  <input type="text" id="fname" name="fname" required /><br />
+                  <label for="lname">Last name*</label>
+                  <input type="text" id="lname" name="lname" required />
+                </div>
+             <!--code for country selection-->
+                <div class="country">
+                  <label for="country">Country*</label>
+                  <select id="country" name="country" required>
+                    <option value="0">select your country</option>
+                    <option value="Afghanistan">Afghanistan</option>
+             
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bermuda">Bermuda</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Cayman Islands">Cayman Islands</option>
+                    <option value="Central African Republic">
+                      Central African Republic
+                    </option>
+                    <option value="Chad">Chad</option>
+                  </select>
+                </div>
+             
+                      <!--code for address detail-->
+             
+                <div class="address">
+                  <label>StreetAddress*</label>
+                  <input type="text" name="address" required />
+                  <label>Postcode*</label>
+                  <input type="number" name="postcode" class="post-code"/>
+                </div>
+                <!--code for profile description-->
+             
+                <div class="profile">
+                  <label>Profile description</label>
+                  
+                  <textarea name="text-area" rows="10" cols="140" required> </textarea>
+             
+             </div>
+             </form>
+                  
+                
+             
+             
+             
+             
+             
+               </div>
+              </div>
+              </form>
+           
+
+            <!--code for next button-->
+
+            <button id="next-step" ><a href="/step_2.html">Next step</a></button>
+           
+          </form> 
+      
+        </main>
+      </body>
+    </html>
+    
+
+        
