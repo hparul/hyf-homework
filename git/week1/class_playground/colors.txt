@@ -1,2 +1,4 @@
 red
 oranges,pink
+red, blue
+oranges
