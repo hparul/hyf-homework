@@ -1,19 +1,19 @@
 
 //dog age calculator
 
-let dogYearOfBirth = 2020;
-let dogYearFuture = 2027;
-let shouldShowResultInDogYears = true;
+const dogYearOfBirth = 2020;
+const dogYearFuture = 2030;
+const shouldShowResultInDogYears = true;
 
 const dogYear = dogYearFuture - dogYearOfBirth;
 
-let humanYear = dogYear / 7;
+const dogAge = dogYear* 7;
 if (shouldShowResultInDogYears === true) {
-  console.log("your dog will be", dogYear, "dog years old in", dogYearFuture);
+  console.log(`your dog will be ${dogYear} dog years old in ${dogYearFuture}`);
 } else {
   console.log(
     "your dog will be",
-    humanYear,
+    dogAge,
     "human years old in",
     dogYearFuture
   );

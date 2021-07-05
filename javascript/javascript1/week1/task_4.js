@@ -6,7 +6,7 @@ getStartupName();
 getStartupName();
 
 function getStartupName() {
-  let firstWords = [
+  const firstWords = [
     "easy",
     "best",
     "corporate",
@@ -18,7 +18,7 @@ function getStartupName() {
     "future",
     "ideal",
   ];
-  let secondWords = [
+  const secondWords = [
     "job",
     "solution",
     "language",
@@ -31,14 +31,9 @@ function getStartupName() {
     "world",
   ];
 
-  const randomNumber = Math.floor(Math.random() * 10);
+  const randomNumber = Math.floor(Math.random() * firstWords.length);
   startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
 
   console.log(
-    "The startup:",
-    startupName,
-    "contains",
-    startupName.length,
-    "characters"
-  );
+    `The startup: ${startupName} contains ${startupName.length} characters`);
 }

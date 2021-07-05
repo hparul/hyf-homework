@@ -10,8 +10,8 @@ function getVolume(width, depth, height) {
 
 // function to return ideal house price.
 function getIdealHousePrice(width, depth, height, gardenSizeInM2) {
-  let volumeInMeters = getVolume(width, depth, height);
-  let idealHousePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
+  const volumeInMeters = getVolume(width, depth, height);
+const idealHousePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
   return idealHousePrice;
 }
 
@@ -24,7 +24,7 @@ function isHouseCostly(
   housePricePaid,
   userName
 ) {
-  let idealHousePrice = getIdealHousePrice(
+  const idealHousePrice = getIdealHousePrice(
     width,
     depth,
     height,
