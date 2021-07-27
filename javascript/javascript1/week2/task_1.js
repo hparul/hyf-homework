@@ -12,7 +12,7 @@ console.log(fullname2);
 
 //code for - when argument for useFormalName is provided when function is called
 
-function getFullname(firstname, lastname, useFormalName) {
+function getFormalFullname(firstname, lastname, useFormalName) {
   if (useFormalName == true) {
     const fullname = "Lord" + " " + firstname + " " + lastname;
 
@@ -24,11 +24,11 @@ function getFullname(firstname, lastname, useFormalName) {
   }
 }
 
-getFullname("", "");
+getFormalFullname("", "");
 
 /* function if there is a checkbox for gender of the user and user formal name*/
 
-function getFullname(firstname, lastname, useFormalName, gender) {
+function getGenderFullname(firstname, lastname, useFormalName, gender) {
   if (gender == "male" && useFormalName == true) {
     const fullname = "Lord" + " " + firstname + " " + lastname;
 
@@ -44,9 +44,9 @@ function getFullname(firstname, lastname, useFormalName, gender) {
   }
 }
 
-fullname1 = getFullname("Parul", "Jain", true, "female"); // if checkbox is there, then no need to give arguments for gender and useFormalName here.
-fullname2 = getFullname("Peter", "Pan", true, "male");
-fullname3 = getFullname("peehu", "jain");
+fullname1 = getGenderFullname("Parul", "Jain", true, "female"); // if checkbox is there, then no need to give arguments for gender and useFormalName here.
+fullname2 = getGenderFullname("Peter", "Pan", true, "male");
+fullname3 = getGenderFullname("peehu", "jain");
 console.log(fullname1);
 console.log(fullname2);
 console.log(fullname3);
