@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>best meaning of your name</h2>
+
+    <p>Please select your input way;</p>
+
+    <select id="sel">
+      <option value="1">press button</option>
+      <option value="2">mouseover</option>
+      <option value="3">write text</option>
+    </select>
+
+    <div>
+      <label for="name"> your name:</label><br />
+      <input type="text" id="myName" name="name" />
+      <button id="myButton">click me</button>
+    </div>
+
+    <p id="nameMeaning"></p>
+    <script>
+      const nameMeaning = document.getElementById("nameMeaning");
+      const inputText = document.getElementById("myName");
+      const button1 = document.getElementById("myButton");
+
+      const spiritAnimal = [
+        " hawk-Rebirth and Growth",
+        " chameleon-Transformation and Progress",
+        "elephant-Sizer Matters, but also Intelligence",
+        " tortoise-Slow but Consistent Progress",
+        "lion- Growth Through Obstructions and Constancy",
+        " butterfly-A Life of Growth, Transformation, and Progress",
+        "bear-strength and corage",
+        "cat-patience",
+        "crow-high perspective",
+        "coyote-playfulness",
+      ];
+
+      const selection = document.getElementById("sel");
+      selection.addEventListener("change", takeUserSelection);
+
+      takeUserSelection();
+
+      function takeUserSelection() {
+        const selection = document.getElementById("sel");
+        const selectionValue = selection.value;
+        if (1 == selectionValue) {
+          button1.addEventListener("click", getSpiritNameWithWarning);
+          inputText.removeEventListener("mouseover", getSpiritName);
+          inputText.removeEventListener("input", getSpiritName);
+        } else if (2 == selectionValue) {
+          inputText.addEventListener("mouseover", getSpiritName);
+          button1.removeEventListener("click", getSpiritNameWithWarning);
+          inputText.removeEventListener("input", getSpiritName);
+        } else if (3 == selectionValue) {
+          inputText.addEventListener("input", getSpiritName);
+          inputText.removeEventListener("mouseover", getSpiritName);
+          button1.removeEventListener("click", getSpiritNameWithWarning);
+        }
+      }
+
+      function getSpiritName() {
+        const myName = document.getElementById("myName").value;
+        nameMeaning.innerText =
+          myName +
+          " - " +
+          spiritAnimal[Math.floor(Math.random() * spiritAnimal.length)];
+      }
+
+      function getSpiritNameWithWarning() {
+        const myName = document.getElementById("myName").value;
+        if (myName) {
+          nameMeaning.innerText =
+            myName +
+            " - " +
+            spiritAnimal[Math.floor(Math.random() * spiritAnimal.length)];
+        } else {
+          alert("please write your name");
+        }
+      }
+    </script>
+  </body>
+</html>

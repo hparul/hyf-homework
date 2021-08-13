@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p>A list of danish words</p>
+      <p id="myList"></p>
+      <button id="myButton">
+        click me to get the shortest word in the above list
+      </button>
+      <p id="shortestWord"></p>
+
+      <script>
+        const danishWords = [
+          "bil",
+          "plante",
+          "kaffe",
+          "bog",
+          "ø",
+          "planetarium",
+        ];
+        function makeUL(array) {
+          // Create the list element:
+          const list = document.createElement("ul");
+
+          for (let i = 0; i < array.length; i++) {
+            // Create the list item:
+            const item = document.createElement("li");
+
+            // Set its contents:
+            item.appendChild(document.createTextNode(array[i]));
+
+            // Add it to the list:
+            list.appendChild(item);
+          }
+
+          // Finally, return the constructed list:
+          return list;
+        }
+
+        document.getElementById("myList").appendChild(makeUL(danishWords));
+
+        document
+          .getElementById("myButton")
+          .setAttribute("onclick", "findShortestWord(danishWords)");
+
+        //const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
+        function findShortestWord(danishWords) {
+          let shortestWord = danishWords[0];
+          for (let i = 0; i < danishWords.length; i++) {
+            if (danishWords[i].length < shortestWord.length) {
+              shortestWord = danishWords[i];
+
+              alert("shortest word in the list is :" + " " + shortestWord);
+            }
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
