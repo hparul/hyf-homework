@@ -1,0 +1,69 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #F9FBFD;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2 {
+    margin: 0;
+}
+
+nav{
+    background: orange;
+    width: 100%;
+}
+input{
+    margin: 1em;
+}
+.navbar li{
+    display: inline-block;
+    margin: 1em;
+    color: black;
+    font-weight: bolder;
+    
+}
+main h2{
+    margin-left: 7em;
+}
+label{
+    color: black;
+    text-align: justify;
+    font-weight: bolder;
+    margin:8em;
+    font-size: larger;
+}
+
+
+
+
+#productList {
+    list-style-type: none;
+    margin: 1em;
+   margin-left: 1em;
+    padding: 2em;
+    
+}
+#productList  li {
+
+    font-size: 20;
+    color: red;
+    border: 2px solid black;
+}
+
+footer{
+    background: orange;
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+    padding: 1em;
+   
+}
+a{
+    color: black;
+   font-weight: bolder;
+    text-decoration: none;
+
+}
