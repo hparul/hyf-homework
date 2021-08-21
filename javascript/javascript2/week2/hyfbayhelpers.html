@@ -1,0 +1,42 @@
+<head>
+    <title>HyfBay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,800"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="navbar">
+        <li>CheapShopKart.com</li>
+        <li><div id="myProduct"></div></li>
+        <li>login</li>
+        <li>cart</li>
+        <li>about us</li>
+      </ul>
+    </nav>
+
+    
+    <main>
+      <div class="sort">
+        <label>Sort:</label>
+        <select id="selection" onchange="renderSortedProducts()">
+            <option value="name">Product name</option>  
+            <option value="cheap">lowest to highest price</option>
+            <option value="expensive">highest to lowest price</option>
+        </select>
+    </div>
+
+    <ul id="productList"></ul>
+     
+        
+    </main>
+    <script src="hyfBayHelpers.js"></script>
+    <script src="main.js"></script>
+
+    <footer>
+      <a href="#">Thanks for shopping</a>
+    </footer>
+  </body>
