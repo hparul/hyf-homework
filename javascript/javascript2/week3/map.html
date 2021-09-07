@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+  
+    <link rel="stylesheet" type="text/css" href="map.css" />
+    
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="map.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAREvKq6Tsw-gLK1ND-oNz1sI6zkd1_Z9Y&libraries=localContext&v=beta&callback=initMap">
+</script>
+
+    
+  </body>
+</html>
