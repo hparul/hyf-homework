@@ -4,17 +4,17 @@ array.forEach((element) => {
   element();
 });
 
-function myName(name) {
-  let name = "John";
-  console.log("My name is" + " " + name);
+function myName() {
+  const name = "John";
+  console.log(`My name is ${name}`);
 }
-function myAge(age) {
+function myAge() {
   const age = "20 yrs";
-  console.log("My age is" + "  " + age);
+  console.log(`My age is ${age}`);
 }
-function myAddress(address) {
+function myAddress() {
   const address = "street 10,Copenhagen";
-  console.log("My address is" + " " + address);
+  console.log(`My address is ${address}`);
 }
 
 //step-2

@@ -21,14 +21,14 @@ function setTime() {
     scoreTxtOfS.innerHTML = countOfS;
     if (countOfL > countOfS) {
       console.log("L wins");
-      var confettiSettings = { target: "canvasL", width: "200", height: "200" };
-      var confetti = new ConfettiGenerator(confettiSettings);
+      const confettiSettings = { target: "canvasL", width: "200", height: "200" };
+      const confetti = new ConfettiGenerator(confettiSettings);
       confetti.render();
       winner.innerHTML = "Player L wins the game";
     } else if (countOfL < countOfS) {
       console.log("S wins");
-      var confettiSettings = { target: "canvasS", width: "200", height: "200" };
-      var confetti = new ConfettiGenerator(confettiSettings);
+      const confettiSettings = { target: "canvasS", width: "200", height: "200" };
+      const confetti = new ConfettiGenerator(confettiSettings);
       confetti.render();
       winner.innerHTML = "Player S wins the game";
     } else if (countOfL === countOfS) {

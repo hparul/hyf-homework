@@ -18,10 +18,8 @@ delayedString(3, "this string logged after 3 seconds");
 
 //step-3-creating button
 const clickButton = document.getElementById("myButton");
-clickButton.addEventListener("click", callDelayedString);
-function callDelayedString() {
-  //delayedString(5, "Called after 5 seconds");
-}
+clickButton.addEventListener("click", ()=>delayedString(3, `Called after 3 seconds`));
+
 
 //step-4
 
@@ -102,6 +100,14 @@ function detectDoubleClick() {
     clickCount = 0;
   }, 0.5 * 1000);
 }
+
+
+//step-8 can also be done as
+window.addEventListener("dblclick",function detectDoubleClick(){
+  alert("double click");
+})
+
+
 
 //step-9
 function logFunnyJoke() {
