@@ -19,7 +19,7 @@ const yearOfMovies=movies.filter(element=>element.year>=1980 && element.year<=19
 console.log(yearOfMovies);
 
 //4.to create extra tag
-movies.forEach(element=>{
+movies.map(element=>{
     if(element.rating>=7){
         element.tag="good";
     }
