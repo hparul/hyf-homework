@@ -18,8 +18,10 @@ const movies = [{"title": "'71","year": 2014,"rating": 7.2,"votes": 41702,"runni
 const yearOfMovies=movies.filter(element=>element.year>=1980 && element.year<=1989);
 console.log(yearOfMovies);
 
-//4.to create extra tag
+//4.to create extra 
+
 movies.map(element=>{
+
     if(element.rating>=7){
         element.tag="good";
     }
