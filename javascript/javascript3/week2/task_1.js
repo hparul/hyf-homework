@@ -23,7 +23,7 @@ function callMeAsynchronously(resolveAfter) {
 callMeAsynchronously(5)
   .then((returnedObject) => {
     console.log(`the function  ${returnedObject}`);
-  })
+  });
   
 
 //creating a promise with async/await
@@ -65,22 +65,20 @@ geolocation()
   });
 
 //api
-//const apiPromise=new Promise((resolve,reject=>{
 
-function toFetchData() {
-  return new Promise((Resolve) => {
+
+  const myPromise = new Promise((resolve) => {
     setTimeout(() => {
-      Resolve();
-    },3000);
+      const result = fetch("http://api.open-notify.org/astros.json");
+  
+      resolve(result);
+    }, 3000);
   });
-}
-  toFetchData().then(()=>{
-    fetch("https://dog.ceo/api/breeds/image/random")
-    .then((response) => response.json())
-    .then((data) => console.log(`wait for 3 sec,${data.message}`));
-      
-      
-  })
+  
+  myPromise.then((data) => {
+    console.log(data);
+  });
+  
     
   
 
