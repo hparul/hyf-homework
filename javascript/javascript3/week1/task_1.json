@@ -1,0 +1,65 @@
+     const recipeString= `[{
+    "category":"dessert",
+    "cuisine":"indian",
+    "key-ingredients":["milk","rice"],
+    "occasion":"sunday feast"
+},
+
+
+{
+    "category":"beverage",
+    "cuisine":"korean",
+    "key-ingredients":["cucumber","kale","spinach"],
+    "occasion":"morning juice"
+},
+{
+    "category":"breads",
+    "cuisine":"american",
+    "key-ingredients":["almond flour","rice flour","millet flour"],
+    "occasion":"brunch"
+},
+{
+    "category":"salads",
+    "cuisine":"italian",
+    "key-ingredients":["cucumber","beetroot","quinoa"],
+    "occasion":"lunch"
+},
+{
+    "category":"snacks",
+    "cuisine":"indian",
+    "key-ingredients":["potato","rice","peas"],
+    "occasion":"evening party"
+}]`;
+console.log(recipeString);
+console.log(typeof recipeString);
+
+
+console.log(JSON.parse(recipeString));
+
+
+// Find a cool api
+/**
+I have chosen Random Dog fact API. It returns facts about Dogs.
+
+How it works -
+https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all to get all the facts at once.
+Change all to parameter ?number= to specify the number of facts you want to receive.
+Change all to parameter ?index= to specify the index of the fact you are targeting.
+
+json data of the api -
+It is an array of objects.
+Below is the example where the array contains 2 objects. Each object has only 1 property. The propertu 
+name is "fact" and the value is the actual fact about the dog. Please see example below -
+https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=2 returns:
+[
+  {
+      "fact": "Endal was the first dog to ride on the London Eye (the characteristic ferris wheel in London, England), and was also the first known dog to successfully use a ATM machine."
+  },
+  {
+      "fact": "At the age of 4 weeks, most dogs have developed the majority of their vocalizations."
+  }
+]
+
+**/
+
+
