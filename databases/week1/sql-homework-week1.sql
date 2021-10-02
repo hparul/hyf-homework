@@ -1,10 +1,11 @@
+use hyf_lesson1;
 SELECT
-  count(*)
+  count(id) as total_task
 FROM
   task;
 --task1--
 SELECT
-  due_date
+  count(id) as total_task
 FROM
   task
 WHERE
@@ -48,7 +49,7 @@ LIMIT
 --task6--
 SELECT
   title,
-  description,
+  
   due_date
 FROM
   task
