@@ -18,33 +18,18 @@ SET
 where
   id = 2;
 --task3
- 
-  --task4
+--task4
 update
   task
 set
-  task.status_id =(
-    select
-      status.id
-    from
-      status
-    where
-      status.name = 'In progress'
-  )
+  task.status_id =2
 where
   id = 4;
 --task5
 update
   task
 set
-  task.status_id =(
-    select
-      status.id
-    from
-      status
-    where
-      status.name = 'Done'
-  )
+  task.status_id = 1
 where
   id = 4;
 --task6

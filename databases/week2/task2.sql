@@ -8,6 +8,7 @@ CREATE TABLE `class` (
   `name` varchar(255) NOT NULL,
   `begins` DATETIME NOT NULL,
   `ends` DATETIME NOT NULL,
+  `status` ENUM('not-started', 'ongoing', 'finished'),
   PRIMARY KEY (`id`)
 ) ;
 
@@ -52,12 +53,12 @@ select * from class;
 select * from student;
 
 CREATE UNIQUE INDEX idx_sname on student(name);
-ALTER TABLE class
+/* ALTER TABLE class
 ADD status VARCHAR(255) NOT NULL;
 UPDATE class
 set status="not-started" where id=1 OR id=4 or id=7 or id=9;
 UPDATE class
 set status="ongoing" where id=2 OR id=5 or id=8 ;
 UPDATE class
-set status="finished" where id=3 OR id=6 ;
-select * from class;
+set status="finished" where id=3 OR id=6 ; */
+
