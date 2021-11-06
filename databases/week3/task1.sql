@@ -1,10 +1,5 @@
 use hyf_lesson3;
 
-
-
-
-
-
 create table `meal`(
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -28,8 +23,6 @@ create table `meal`(
   PRIMARY KEY (`id`)
 ) ;
 
-
-
 CREATE TABLE `Review` (
   `id` int DEFAULT NULL,
   `title` varchar(20) DEFAULT NULL,
@@ -38,8 +31,7 @@ CREATE TABLE `Review` (
   `stars` int DEFAULT NULL,
   `created_date` date DEFAULT NULL
 );
-  
---meals
+
 INSERT INTO meal(id, title, `description`, `location`, `when`, max_reservations, price, created_date)
  VALUES (1,'closed clubwrap','green veggies and sweetpotato','frederiksberg','2021-10-05 12:25:00',4,70,'2021-10-03');
  INSERT INTO meal(id, title, `description`, `location`, `when`, max_reservations, price, created_date)
@@ -52,7 +44,6 @@ INSERT INTO meal(id, title, `description`, `location`, `when`, max_reservations,
  VALUES (5,'chicken salad','apple,quinoa and fresh chicken','bellacenter','2021-10-10 15:25:00',8,40,'2021-10-08');
  INSERT INTO meal(id, title, `description`, `location`, `when`, max_reservations, price, created_date)
  VALUES (6,'spinach shake','green veggies and orange,carrots','norrebro','2021-10-015 17:25:00',9,50,'2021-10-12');
- 
 
  --reservation
 
@@ -79,13 +70,6 @@ INSERT INTO meal(id, title, `description`, `location`, `when`, max_reservations,
  VALUES (5,'wonderful','tastes superamazing',3,5,'2021-11-09');
 
 
-/* Get all meals
-Add a new meal
-Get a meal with any id, fx 1
-Update a meal with any id, fx 1. Update any attribute fx the title or multiple attributes
-Delete a meal with any id, fx 1
- */
-
 SELECT * from meal;
 INSERT INTO meal(id,title,`description`,`location`,`when`,max_reservations,price,created_date)
 VALUES(7,'cheeseburger','salad and potatopatty','roslikde','2021-11-10 16:09:50',5,40,'2021-11-09');
@@ -96,14 +80,6 @@ where id=4;
 SELECT * from meal;
 delete from meal WHERE id=6;
 
-
-
-/* Queries to write
-Get all reservations
-Add a new reservation
-Get a reservation with any id, fx 1
-Update a reservation with any id, fx 1. Update any attribute fx the title or multiple attributes
-Delete a reservation with any id, fx 1 */
 
 SELECT * from Reservation;
 INSERT INTO Reservation(id, number_of_guests, meal_id, created_date, contact_phonenumber, contact_name, contact_email)
@@ -120,12 +96,6 @@ INSERT INTO Reservation(id, number_of_guests, meal_id, created_date, contact_pho
  where id=1;
  delete from Reservation where id = 2;
 
- /* Get all reviews
-Add a new review
-Get a review with any id, fx 1
-Update a review with any id, fx 1. Update any attribute fx the title or multiple attributes
-Delete a review with any id, fx 1
- */
 
  SELECT * from Review;
 INSERT INTO Review(id, title, `description`, meal_id, stars, created_date)
@@ -137,14 +107,6 @@ INSERT INTO Review(id, title, `description`, meal_id, stars, created_date)
  delete from Review where id = 3;
 
 
-/*  Get meals that has a price smaller than a specific price fx 90
-Get meals that still has available reservations
-Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
-Get meals that has been created between two dates
-Get only specific number of meals fx return only 5 meals
-Get the meals that have good reviews
-Get reservations for a specific meal sorted by created_date
-Sort all meals by average number of stars in the reviews */
 
 --Get meals that has a price smaller than a specific price
 select title,price from meal where price < 50;
@@ -164,11 +126,20 @@ SELECT * FROM meal LIMIT 4;
 SELECT meal.title,meal.id,Review.stars,Review.description from meal
 join Review on meal.id=Review.meal_id
 where stars>=4; 
+
 --Get reservations for a specific meal sorted by created_date 
 select Reservation.number_of_guests,meal.title,Reservation.created_date from meal
 join Reservation on meal.id=Reservation.meal_id
 where meal.id=2
 ORDER BY Reservation.created_date  ;
+
+
+ --Get reservations for a specific meal sorted by created_date 
+SELECT meal.title,  SUM(Reservation.number_of_guests), Reservation.created_date
+FROM meal
+JOIN Reservation ON (meal.id=Reservation.meal_id)
+GROUP BY Reservation.created_date,meal.title;
+ORDER BY Reservation.created_date;
 
 --Sort all meals by average number of stars in the reviews
 select avg(Review.stars) ,meal.title,Review.meal_id from meal
