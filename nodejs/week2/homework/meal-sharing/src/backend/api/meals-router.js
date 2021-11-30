@@ -7,34 +7,47 @@ router.get("/", async (request, response) => {
   try {
     console.log(meals);
     console.log("in /api/meals");
+    
 
     const maxPrice = request.query.maxPrice;
-    const titles = request.query.title;
+    
+    
+    //const titles = request.query.title;
     const createdAfter = request.query.createdAfter;
     const limit = request.query.limit;
+    let filteredMeals=meals;
     if (maxPrice !== undefined && maxPrice !== "") {
-      console.log("maxPrice");
-      const filteredMeals = meals.filter((meal) => meal.price < maxPrice);
-      response.send(filteredMeals);
-    } else if (titles !== undefined && titles !== "") {
+      console.log('maxPrice');
+      filteredMeals = meals.filter((meal) => meal.price < parseInt(maxPrice));
+      //response.send(filteredMeals);
+    }
+    if (titles !== undefined && titles !== "") {
       console.log("titles");
-      const filteredTitle = meals.filter((meal) => meal.title.includes(titles));
-      response.send(filteredTitle);
-    } else if (createdAfter !== undefined && createdAfter !== "") {
-      console.log("createdAfter");
-      const filteredDate = meals.filter(
-        (meal) => meal.createdAt > createdAfter
+      filteredMeals = filteredMeals.filter((meal) =>
+        meal.title.includes(titles)
       );
-      response.send(filteredDate);
-    } else if (limit !== undefined && limit !== "") {
+      //response.send(filteredTitle);
+    }
+    if (createdAfter !== undefined && createdAfter !== "") {
+      console.log(createdAfter);
+      console.log(filteredMeals);
+
+      filteredMeals = filteredMeals.filter(
+        (meal) => meal.createdAt > new Date(createdAfter)
+      );
+      console.log(filteredMeals);
+    }
+    if (limit !== undefined && limit !== "") {
       console.log("limit");
       const newMeals = [];
       for (let i = 0; i < limit; i++) {
         console.log(i);
-        newMeals.push(meals[i]);
+        newMeals.push(filteredMeals[i]);
       }
-      response.send(newMeals);
-    } else {
+      filteredMeals=newMeals;
+      //response.send(newMeals);
+    } 
+    /* else {
       let undefinedQueryParam = false;
       for (const key in request.query) {
         undefinedQueryParam = true;
@@ -45,7 +58,9 @@ router.get("/", async (request, response) => {
       } else {
         response.send(meals);
       }
-    }
+    } */
+    response.send(filteredMeals);
+ 
   } catch (error) {
     throw error;
   }
@@ -58,7 +73,7 @@ router.get("/:id", (request, response) => {
   if (meal == undefined) {
     response.send("{ Error : Requested meal does not exist}");
   } else {
-    response.send({ data: meal });
+    response.send( {data: meal} );
   }
 });
 
