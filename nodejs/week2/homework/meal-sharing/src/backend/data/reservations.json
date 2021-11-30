@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Benjamin Hughes",
+    "email": "benjamin@hughes.dk",
+    "mealId": 1
+  },
+  {
+    "id": 2,
+    "name": "Parul Jain",
+    "email": "hparul@yahoo.com",
+    "mealId": 2
+  },
+  {
+    "id": 3,
+    "name": "Peter Pan",
+    "email": "peter@pan.dk",
+    "mealId": 1
+  },
+  {
+    "id": 4,
+    "name": "Tina Scoff",
+    "email": "tina@scoff.dk",
+    "mealId": 3
+  }
+]
