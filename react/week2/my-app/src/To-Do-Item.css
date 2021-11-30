@@ -1,0 +1,7 @@
+.strike-through {
+  color: blue;
+}
+
+input[type="checkbox"]:checked + label.strike-through {
+  text-decoration: line-through;
+}
