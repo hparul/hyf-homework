@@ -12,7 +12,7 @@ router.get("/", async (request, response) => {
     const maxPrice = request.query.maxPrice;
     
     
-    //const titles = request.query.title;
+    const titles = request.query.title;
     const createdAfter = request.query.createdAfter;
     const limit = request.query.limit;
     let filteredMeals=meals;
