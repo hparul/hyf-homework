@@ -10,7 +10,13 @@ app.get("/calculator/add", (request, response) => {
   console.log(request.query);
   const firstParam = parseInt(request.query.firstParam);
   const secondParam = parseInt(request.query.secondParam);
-  const sum = firstParam + secondParam;
+  const thirdParam = parseInt(request.query.thirdParam);
+  const array1=[firstParam,secondParam,thirdParam]
+
+  const reducer = (previousValue, currentValue) => previousValue + currentValue;
+  console.log(array1.reduce(reducer));
+  //const sum = firstParam + secondParam;
+  const sum=array1.reduce(reducer);
   response.send(sum.toString());
 });
 
@@ -18,7 +24,11 @@ app.get("/calculator/subtract", (request, response) => {
   console.log(request.query);
   const firstParam = parseInt(request.query.firstParam);
   const secondParam = parseInt(request.query.secondParam);
-  const subtract = firstParam - secondParam;
+  const thirdParam = parseInt(request.query.thirdParam);
+  const array1=[firstParam,secondParam,thirdParam]
+  const reducer = (previousValue, currentValue) => previousValue - currentValue;
+  //const subtract = firstParam - secondParam;
+  const subtract=array1.reduce(reducer);
   response.send(subtract.toString());
 });
 
@@ -26,7 +36,11 @@ app.get("/calculator/multiply", (request, response) => {
   console.log(request.query);
   const firstParam = parseInt(request.query.firstParam);
   const secondParam = parseInt(request.query.secondParam);
-  const multiply = firstParam * secondParam;
+  const thirdParam = parseInt(request.query.thirdParam);
+  const array1=[firstParam,secondParam,thirdParam]
+  const reducer = (previousValue, currentValue) => previousValue * currentValue;
+  //const multiply = firstParam * secondParam;
+  const multiply=array1.reduce(reducer);
   response.send(multiply.toString());
 }); 
 
