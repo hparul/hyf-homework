@@ -115,6 +115,7 @@ select meal.title as available, max_reservations, number_of_guests,(max_reservat
 join Reservation on meal.id=Reservation.meal_id
 where (max_reservations-number_of_guests>0);
 
+
 --Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 select title,description from meal
 WHERE description like '%beet juice with%';
