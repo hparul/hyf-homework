@@ -10,6 +10,16 @@ const reservations = require("./data/reservations");
 app.get("/", async (request, response) => {
   response.send("Meal Sharing Web App");
 });
+
+
+//route for meals
+app.get("/meals", async (request, response) => {
+  const copiedMeals = JSON.parse(JSON.stringify(meals));
+  const mealsWithReviews = copiedMeals.map((meal) => {
+    meal.reviews = reviews.filter((review) => review.mealId === meal.id);
+    return meal;
+  });
+
 function getMealsWithReviews(){
   const mealsWithReviews = meals.map((meal) => {
     meal.reviews = reviews.filter((review) => review.mealId === meal.id);
@@ -21,13 +31,22 @@ function getMealsWithReviews(){
 app.get("/meals", async (request, response) => {
  const mealsWithReviews=getMealsWithReviews();
   
+
   response.send(mealsWithReviews);
 });
 
 //route for cheap meals
 app.get("/cheap-meals", async (request, response) => {
+
+  const copiedMeals = JSON.parse(JSON.stringify(meals));
+  const mealsWithReviews = copiedMeals.map((meal) => {
+    meal.reviews = reviews.filter((review) => review.mealId === meal.id);
+    return meal;
+  });
+
   
   const mealsWithReviews = getMealsWithReviews();
+
 
   const cheapMeals=mealsWithReviews.filter(meal =>meal.price < 70);
   response.send(cheapMeals);
@@ -35,17 +54,33 @@ app.get("/cheap-meals", async (request, response) => {
 
 //route for large meals
 app.get("/large-meals", async (request, response) => {
+
+  const copiedMeals = JSON.parse(JSON.stringify(meals));
+  const mealsWithReviews = copiedMeals.map((meal) => {
+    meal.reviews = reviews.filter((review) => review.mealId === meal.id);
+    return meal;
+  });
+
  
   const mealsWithReviews = getMealsWithReviews();
   
+
   const largeMeals=mealsWithReviews.filter(meal =>meal.maxNumberOfGuests >= 10);
   response.send(largeMeals);
 });
 
 //route for random meals
 app.get("/meal", async (request, response) => {
+
+  const copiedMeals = JSON.parse(JSON.stringify(meals));
+  const mealsWithReviews = copiedMeals.map((meal) => {
+    meal.reviews = reviews.filter((review) => review.mealId === meal.id);
+    return meal;
+  });
+
  
   const mealsWithReviews = getMealsWithReviews();
+
   const randomNumber=Math.floor(Math.random() * mealsWithReviews.length);
   const randomMeals=mealsWithReviews[randomNumber];
   response.send(randomMeals);
@@ -53,17 +88,28 @@ app.get("/meal", async (request, response) => {
 
 //route for all reservations
 app.get("/reservations", async (request, response) => {
+
+  const copiedReservations = JSON.parse(JSON.stringify(reservations));
+  response.send(copiedReservations);
+
  
   response.send(reservations);
+
   });
   
 
 
 //route for random reservation
 app.get("/reservation", async (request, response) => {
+
+  const copiedReservations = JSON.parse(JSON.stringify(reservations));
+  const randomNumber=Math.floor(Math.random() * copiedReservations.length);
+  const randomReservation=copiedReservations[randomNumber];
+
   
   const randomNumber=Math.floor(Math.random() * reservations.length);
   const randomReservation=reservations[randomNumber];
+
   response.send(randomReservation);
   });
   
