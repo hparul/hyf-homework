@@ -35,10 +35,10 @@ const DataFetching = (props) => {
     }, [AddInitialData])
 
 
-    return (
+    /* return (
         <>
             
         </>
-    ) 
+    )  */
 }
 export default DataFetching;
