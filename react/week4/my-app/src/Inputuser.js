@@ -44,9 +44,9 @@ const InputUser = () => {
     console.log(users);
   }, []);
 
-  useEffect(() => {
+  /* useEffect(() => {
     SearchUser();
-  }, [SearchUser]);
+  }, [SearchUser]); */
 
   const onChangeName = (e) => {
     setName(e.target.value);
