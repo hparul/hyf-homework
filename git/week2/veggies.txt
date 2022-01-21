@@ -1,5 +1,7 @@
 beetroot
 potato
-capsicum
+ladyfinger
 cauliflower
 beans
+spinach
+peas
