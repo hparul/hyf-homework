@@ -38,12 +38,12 @@ const SubmitForm = (props) => {
   return (
     <div>
       Todo description
-      <input type="text" value={description} onChange={onChangeDescription} />
+      <input type="text" value={description} onChange={onChangeDescription} style={{fontSize:'20px',margin:'20px'}}/>
       <br></br>
       deadline
-      <input type="date" value={deadline} onChange={onChangeDeadline} />
+      <input type="date" value={deadline} onChange={onChangeDeadline} style={{fontSize:'20px',margin:'80px'}}/>
       <br></br>
-      <button onClick={UpdateForm}>Add todo</button>
+      <button onClick={UpdateForm} style={{margin:'8px',padding:'10px',fontSize:'20px'}}>Add todo</button>
     </div>
   );
 };
